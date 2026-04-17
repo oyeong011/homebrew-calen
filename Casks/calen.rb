@@ -1,6 +1,6 @@
 cask "calen" do
   version "0.2.2"
-  sha256 "ad9bcc0393c374e308e2560a84a6e5d47caf7b8cdefb57108874bf6c6e4fa442"
+  sha256 "bb154a7a3459c7fa7064b3814b457d535007b5d49e959ce29306a5171ea438be"
 
   url "https://github.com/oyeong011/Planit/releases/download/v0.2.2/Calen-0.2.2-universal.zip"
   name "Calen"
