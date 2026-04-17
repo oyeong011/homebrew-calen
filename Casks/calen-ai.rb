@@ -1,8 +1,8 @@
 cask "calen-ai" do
-  version "0.2.3"
-  sha256 "786bcd803a96ce08028d3012306526033b56dbea2e422be529e422bb13c85c33"
+  version "0.2.4"
+  sha256 "bb55ec36aa2b10df3ed835cd582e6bb2e8368442444df6d1adbad18fe3fd3a61"
 
-  url "https://github.com/oyeong011/Planit/releases/download/v0.2.3/Calen-0.2.3-universal.zip"
+  url "https://github.com/oyeong011/Planit/releases/download/v0.2.4/Calen-0.2.4-universal.zip"
   name "Calen"
   desc "AI-powered macOS menu bar calendar with Google Calendar integration"
   homepage "https://github.com/oyeong011/Planit"
@@ -11,6 +11,8 @@ cask "calen-ai" do
 
   app "Calen.app"
 
+  # Menu-bar apps (LSUIElement) 는 Dock 아이콘이 없어 사용자가 '앱이 설치됐는지' 확인 못 하는
+  # 혼란이 흔함. postflight에서 자동 실행해 메뉴바 아이콘이 바로 보이도록 한다.
   postflight do
     system "/usr/bin/open", "-a", "Calen"
   end
