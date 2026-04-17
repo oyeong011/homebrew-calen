@@ -1,6 +1,6 @@
 cask "calen" do
   version "0.2.13"
-  sha256 "715104caa87e8a8802ea7a426006615cb2dfe46458a4775ae68025dc0cb71797"
+  sha256 "8afc70ccbf87362653fc0fdba5b433d3ba2da9eecbdf446540c7febee8268e7a"
 
   url "https://github.com/oyeong011/Planit/releases/download/v0.2.13/Calen-0.2.13-universal.zip"
   name "Calen"
@@ -13,7 +13,14 @@ cask "calen" do
 
   # Menu-bar apps (LSUIElement) 는 Dock 아이콘이 없어 사용자가 '앱이 설치됐는지' 확인 못 하는
   # 혼란이 흔함. postflight에서 자동 실행해 메뉴바 아이콘이 바로 보이도록 한다.
+  # 그리고 upgrade 시 실행 중인 옛 프로세스가 메모리에 그대로 있으면
+  # 새 번들 대신 옛 바이너리가 계속 돌아 버전/기능이 반영되지 않는 문제가 있어,
+  # uninstall_preflight에서 실행 중 프로세스를 먼저 종료한다.
+  uninstall_preflight do
+    system "/usr/bin/pkill", "-f", "/Applications/Calen.app/Contents/MacOS/Calen"
+  end
   postflight do
+    sleep 1
     system "/usr/bin/open", "-a", "Calen"
   end
 
