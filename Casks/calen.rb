@@ -11,6 +11,10 @@ cask "calen" do
 
   app "Calen.app"
 
+  postflight do
+    system "/usr/bin/open", "-a", "Calen"
+  end
+
   zap trash: [
     "~/Library/Application Support/Calen",
     "~/Library/Caches/com.oy.planit",
