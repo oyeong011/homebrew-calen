@@ -1,6 +1,6 @@
 cask "calen-ai" do
   version "0.4.30"
-  sha256 "54faf66c630ba11ade902893cb12a7c8599fa85877137022f107ee645f7a988a"
+  sha256 "be706d4e552f8a0691583637fd59a540f85cf2e7bdf2567522a72389a606b1ea"
 
   url "https://github.com/oyeong011/Planit/releases/download/v0.4.30/Calen-0.4.30-universal.zip"
   name "Calen"
