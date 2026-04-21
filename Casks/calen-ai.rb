@@ -1,8 +1,8 @@
 cask "calen-ai" do
-  version "0.4.41"
-  sha256 "7da13c5e885b2f5cb4620997677b353befe4a396e71df7db28c0b67d6131c6fe"
+  version "0.4.42"
+  sha256 "dbcad9d4ea845dd8722bf9350d231ee0c950d6ab9ba0bfb86303d6216c5183b7"
 
-  url "https://github.com/oyeong011/Planit/releases/download/v0.4.41/Calen-0.4.41-universal.zip"
+  url "https://github.com/oyeong011/Planit/releases/download/v0.4.42/Calen-0.4.42-universal.zip"
   name "Calen"
   desc "AI-powered macOS menu bar calendar with Google Calendar integration"
   homepage "https://github.com/oyeong011/Planit"
